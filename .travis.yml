@@ -1,0 +1,32 @@
+language: ruby
+os: linux
+rvm:
+- 2.4.1
+before_script:
+- chmod +x ./script/cibuild
+script: "./script/cibuild"
+before_install:
+  - nvm install $NODE_VERSION
+branches:
+  only:
+  - master
+  - gh-pages
+  - "/pages-(.*)/"
+env:
+  global:
+  - NODE_VERSION="8.11.2"
+  - secure
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: MK8oU7KcRYe40JB0zFOTtyJpVnhphrySHEl+oKDBrx8U8YlVkeNScKs3BIqyw0SggPvaUHbtemgHWL1Ky8uKBLwldCIWFjGGdVuquC+YT8S+qnpjGP8VTXRcPxb7+QyJEO9r6DJdeGc3NOFU5WZvIzYYfpmj5lCaEJKKCwQS6z8ZTrv5Rbe7dYgLPu2ETH/W9IICvQlye3JhEgLomUVcJ94pybXMo3w0qOPGxjoE1Mp7GIXRUpg2EVGU+q0M2PRzQvDEJ9l81drJR386o+jgscJWiVIa/RLjHh0mZMcAFt4himIp6gUmKJ4kRWOmsAKHNOwHEuslFm7hEmYf9jiP/XoM4VC0Lt1Ze/jnbq9RNkfFFSPjnSKHjVVcstYMrBTDTj0izu92yLArhjXzskWTHztiB81zFo7K5hOWxnYFWptbrNvSnRO4RIe2FmeYjm0W8wn2f0Ti/uuP628QqrN//3AwmIlvlce62Q2DTK6G6027hV0xXUxYy9apiUIZ5l3ZgMSmMxBHqKQLctMiKjWeGqhfJew4340MJFHsA/StjGgZ31nd/5h4GVEyYHwKYShGOJ0Y4RujSTke0EaoU5DZ0A0hFhoa89r38Q6f3qJCj/dlJfWztLIbPqAcEz1Wct+P4qv06CmhZQos/RYjb1/+jSqU6Wyfn2SsjgbZpHBtvSY=
+sudo: false
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  keep-history: true
+  local-dir: "./_site"
+  committer-from-gh: true
+  user: Chen, KunYi(陳坤毅)
+  email: kunyi@uwingstech.com
+  on:
+    branch: master

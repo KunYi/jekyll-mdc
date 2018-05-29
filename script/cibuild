@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e # halt script on error
+
+# run webpack
+npm install
+npm start
+
+# run jekyll
+bundle exec jekyll build
+bundle exec htmlproofer --assume-extension --disable-external --url-swap \/jekyll-mdc: ./_site

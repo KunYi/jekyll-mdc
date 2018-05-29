@@ -1,0 +1,80 @@
+
+section:
+  experience: 工作經歷 
+  education: 學歷
+  skills: 技能
+  ref: 參考
+  contact: 聯絡方式
+
+experience:
+  - org: UBIQCONN TECHNOLOGY
+    url: https://www.ubiqconn.com
+    position: Senior Software Engineer
+    when: Mar 2010 - Dec 2017
+    location: NEIHU, TAIPEI
+    bullets:
+        - Handling an embedded linux porject to delivery on schedule. visit <a href="https://www.evoko.se/products/evoko-liso/">Evoko Liso</a>, please.
+        - Bring-up Qualcomm 8960 platfrom. debugging and troubleshooting include display, bootloader and perpherals
+        - Implemented a custom service with special hardware for Android 7/8. include kernel/hal/framework
+  - org: MILDEF CRETE SYSTEMS 
+    url: http://eng.crete.com.tw 
+    position: Advanced Software Engineer
+    when: Mar 2006 - Dec 2009
+    location: SHENKENG, NEW TAIPEI
+    bullets:
+        - Migration Windows Mobile 5 BSP to Windows Mobile 6.1 and got LTK certificate.
+        - BSP development for Windows Mobile/CE handheld device, platfrom base on PXA270/Nvidia Goforce4800
+        - BIOS development base on AMI Core8/Intel eMenlow platform. include bring-up, debugging and troubleshooting.
+
+education:
+  - org: TAHWA UNIVERSITY OF SCIENCE AND TECHNOLOGY
+    role: B.E in two-year college with diplomat
+    location: XINCHU
+    url: http://en.tust.edu.tw
+    when: Sept 2000 - June 2002
+    bullets: 
+      - Majored in electronic engineering
+
+reference:
+  - My spaces :
+    - <a href="https://kunyichen.wordpress.com">Blog</a>
+    - <a class="fab fa-github fa-2x" href="https://www.github.com/kunyi" style="color:black;background:white;text-decoration:none;"><a>  and <a href="https://resume.github.io/?KunYi">Github R&eacute;sum&eacute;</a>
+  - Citation to my space :
+    - <a href="http://biblioteca.usac.edu.gt/tesis/08/08_0222_EO.pdf">Page 53, SISTEMA DE MONITOREO Y CONTROL REMOTO DE REPETIDORAS VHF MTR2000, A TRAVES DE LA RED GPRS</a>
+    - <a href="http://ir.lib.ntut.edu.tw/wSite/ct?mp=ntut&xItem=48001&ctNode=447">參考文獻21, 行動手機設備之原理解析與電路實現</a>
+    - <a href="http://hdl.handle.net/11296/84tn5z">參考文獻10, 以手機遙控攝影功能之小型飛行器</a>
+  - Others:
+    - <a href="https://www.linkedin.com/in/kunyichen/" alt="LinkedIn" class="fab fa-linkedin fa-2x" style="background:white;color:#007bb5;text-decoration:none;"></a>
+
+contact:
+  - Info.:
+    - <i class="fas fa-envelope"> </i> <a href="mailto:kunyi.chen@gmail.com"> KunYi Chen</a>
+    - <i class="fas fa-mobile-alt"> </i> <a href="tel:+886917110540"> 0917-110540</a>
+
+skills:
+  - Languages:
+    primary:
+      - C/C++
+    secondary:
+      - Java
+      - Assembly
+      - Bash
+      - Python
+  - Hardware:
+    primary:
+      - MCUs(8051/AVR/Cortex Mx)
+      - UART/I2C/SPI/USB
+      - MIPI DSI/CSI
+      - Display port
+      - Digital logical circuts
+      - RF design of Cellur phone
+    secondary:
+      - Audio circuts application
+  - Systems:
+    primary:
+      - Yocto Linux
+      - Android
+      - Windows
+    secondary:
+      - FreeRTOS
+

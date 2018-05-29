@@ -1,0 +1,21 @@
+
+- name: section.experience
+  id: experience
+  layout: block
+
+- name: section.education
+  id: education
+  layout: block
+
+- name: section.skills
+  id: skills
+  layout: cloud
+
+- name: section.ref
+  id: reference
+  layout: list
+
+- name: section.contact
+  id: contact
+  layout: list
+
