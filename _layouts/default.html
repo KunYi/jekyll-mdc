@@ -15,9 +15,7 @@
         {%- asset main.js @path -%}
       {%- endcapture -%}
       {%- assign fname=jspath | split:"/" -%}
-      {%- capture jspath -%}
-        {{ fname.last | prepend: "/assets/" }}
-      {%- endcapture -%}
-	  <script src="{{ jspath | prepend: site.baseurl_root }}" type="text/javascript"></script>
+      {%- assign assets_path=site.baseurl_root | append:"/assets/" -%}
+      <script src="{{ fname.last | prepend: assets_path }}" type="text/javascript"></script>
   </body>
 </html>
