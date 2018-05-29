@@ -9,6 +9,14 @@
 		{%- for section in site.data.sections -%}
 		<a href="#{{ section.id }}" class="d-item">{% t {{ section.name }} %}</a>
 		{%- endfor -%}
+		{%- if site.lang == "en" -%}
+		  {%- capture link1 -%}{{ site.baseurl_root }}/zh-Hant-TW/index.html{%- endcapture -%}
+		  {%- assign lang="中" -%}
+		{%- else -%}
+		  {%- capture link1 -%}{{ site.baseurl_root }}/index.html{%- endcapture -%}
+		  {%- assign lang="En" -%}
+		{%- endif -%}
+		<a href="{{ link1 }}" class="d-item">{{ lang }}</a>
         </section>
    </header>
 
