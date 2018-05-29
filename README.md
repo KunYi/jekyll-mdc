@@ -14,12 +14,12 @@ Note that GitHub Pages doesn't run gems that aren't on their predefined list, so
 ### Local operation
 ---
 ```bash
-git clone https://github.com/kunyi/jekyll-mdc.git
-cd jekyll-mdc
-npm install     # for Webpack install
-bundle install  # for Jekyll install
-npm start       # run webpack
-bundle jekyll server # for local server
+$ git clone https://github.com/kunyi/jekyll-mdc.git
+$ cd jekyll-mdc
+$ npm install     # for Webpack install
+$ bundle install  # for Jekyll install
+$ npm start       # run webpack
+$ bundle jekyll server # for local server
 ```
 ---
 # References
