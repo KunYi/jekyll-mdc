@@ -1,6 +1,6 @@
 # Matrial Components Web + Jekyll + Travis-CI for GitHub Pages
 ---
-[![Build Status]https://travis-ci.org/KunYi/jekyll-mdc.svg?branch=master](https://travis-ci.org/KunYi/jekyll-mdc)
+[![Build Status](https://travis-ci.org/KunYi/jekyll-mdc.svg?branch=master)](https://travis-ci.org/KunYi/jekyll-mdc)
 
 To use: when you have the dependancies as per
 [the docs](https://jekyllrb.com/docs/installation/) you should run
