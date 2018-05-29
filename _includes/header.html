@@ -7,7 +7,7 @@
 		</section>
 		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
 		{%- for section in site.data.sections -%}
-		<a href="#{{ section.id }}">{% t {{ section.name }} %}</a>
+		<a href="#{{ section.id }}" class="d-item">{% t {{ section.name }} %}</a>
 		{%- endfor -%}
         </section>
    </header>

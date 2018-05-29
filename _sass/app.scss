@@ -6,3 +6,46 @@
   @include mdc-button-ink-color(teal);
   @include mdc-states(teal);
 }
+
+.mdc-top-app-bar__section > a:link.d-item {
+    color:white;
+    padding: 4px;
+    margin: 4px;
+    text-decoration-line: none;
+}
+
+.mdc-top-app-bar_section > a:hover.d-item {
+  color:white;
+  padding: 4px;
+  margin: 4px;
+  text-decoration-line: none;
+  background-color: var(--mdc-theme-on-primary,rgba(255,255,255, 0.2));
+}
+
+.mdc-top-app-bar__section > a:active.d-item {
+  color:white;
+  padding: 4px;
+  margin: 4px;
+  text-decoration-line: none;
+  background-color: var(--mdc-theme-on-primary,rgba(255,255,255, 0.4));
+}
+
+.mdc-top-app-bar__section > a:visited.d-item {
+  color:white;
+  padding: 4px;
+  margin: 4px;
+  text-decoration-line: none;
+  background-color: var(--mdc-theme-on-primary,rgba(255,255,255, 0.1));
+}
+
+@media (min-width:600px) {
+  .mdc-top-app-bar__section--align-end {
+    display: flex;
+  }
+}
+
+@media (max-width: 599px) {
+  .mdc-top-app-bar__section--align-end {
+    display: none;
+  }
+}
