@@ -1,4 +1,4 @@
-# Matrial Components Web + Jekyll + Travis-CI for GitHub Pages
+# Jekyll integration Material Components Web with Travis-CI for GitHub Pages
 ---
 [![Build Status](https://travis-ci.org/KunYi/jekyll-mdc.svg?branch=master)](https://travis-ci.org/KunYi/jekyll-mdc)
 
@@ -11,6 +11,17 @@ the post or page layouts, copy [those files](https://github.com/jekyll/minima/tr
 
 Note that GitHub Pages doesn't run gems that aren't on their predefined list, so it won't work with their autocompile, you'll need to push up and serve the compiled files.
 
+### Local operation
+---
+```bash
+git clone https://github.com/kunyi/jekyll-mdc.git
+cd jekyll-mdc
+npm install     # for Webpack install
+bundle install  # for Jekyll install
+npm start       # run webpack
+bundle jekyll server # for local server
+```
+---
 # References
 * [Travis-CI encrypt 'GITHUB_TOKEN'](https://github.com/travis-ci/travis.rb#encrypt)
 * [Travis-CI Deploy](https://docs.travis-ci.com/user/deployment/pages/)
