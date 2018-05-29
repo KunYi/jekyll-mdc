@@ -39,10 +39,10 @@ languages:
 
 exclude_from_localizations:
   - assets
+  - _assets
   - javascript
   - images
   - css
-    
 
 # Build settings
 markdown: kramdown

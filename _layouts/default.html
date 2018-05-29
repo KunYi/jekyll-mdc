@@ -7,6 +7,17 @@
           {{ content }}
       </main>
       {%- include footer.html -%}
-	{%- asset main.js -%}
+      {%- comment -%}
+         Due to i18n will translate js path to multiple lange
+         we need extract file name and to prepend baseurl_root
+      {%- endcomment -%}
+      {%- capture jspath -%}
+        {%- asset main.js @path -%}
+      {%- endcapture -%}
+      {%- assign fname=jspath | split:"/" -%}
+      {%- capture jspath -%}
+        {{ fname.last | prepend: "/assets/" }}
+      {%- endcapture -%}
+	  <script src="{{ jspath | prepend: site.baseurl_root }}" type="text/javascript"></script>
   </body>
 </html>
