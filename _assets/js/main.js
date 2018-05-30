@@ -4,7 +4,7 @@
 function jsel(label) {
     $('html, body').animate({
         scrollTop: $("#"+label).offset().top -
-        $('.mdc-top-app-bar').height() - 2
+        $('.mdc-top-app-bar').height() - 4
     }, 1000);
 
     $('[data-spy="scroll"]').each(function () {

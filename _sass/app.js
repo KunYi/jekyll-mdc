@@ -15,9 +15,7 @@ menuButtonEl.addEventListener('click', function() {
 
 // Listen for selected item
 menuEl.addEventListener('MDCMenu:selected', function(evt) {
-   var it = evt.detail.item; // get item
-   var label = it.title;
-
+   var label = evt.detail.item.title;
    if (label == 'change-lang')
      document.querySelector('.d-change-lang').click();
    else jsel(label);

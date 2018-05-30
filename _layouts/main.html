@@ -2,24 +2,41 @@
 layout: default
 namespace: main
 ---
-{%- comment -%}
-    place menu into '<main>' sections
-{%- endcomment -%}
-<div class="mdc-menu" tabindex="-1" id="menu">
-  <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
-    {%- for section in site.data.sections -%}
-    <li class="mdc-list-item" role="menuitem" tabindex="0" title="{{ section.id }}">
-       {% t {{ section.name }} %}
-    </li>
-    {%- endfor -%}
-    <li class="mdc-list-divider" role="separator"></li>
-    <li class="mdc-list-item" role="menuitem" tabindex="0" title="change-lang">
-      {%- if site.lang == "en" -%}
-        中
-      {%- else -%}
-        En
-      {%- endif -%}
-    </li>
-  </ul>
-</div>
-{{ content }}
+{%- include header.html -%}
+<div class="contain-wrap"></div>
+  <main class="mdc-top-app-bar--fixed-adjust">
+  <div class="mdc-menu" tabindex="-1" id="menu">
+    <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+      {%- for section in site.data.sections -%}
+      <li class="mdc-list-item" role="menuitem" tabindex="0" title="{{ section.id }}">
+        {% t {{ section.name }} %}
+      </li>
+      {%- endfor -%}
+      <li class="mdc-list-divider" role="separator"></li>
+      <li class="mdc-list-item" role="menuitem" tabindex="0" title="change-lang">
+        {%- if site.lang == "en" -%}
+          中
+        {%- else -%}
+          En
+        {%- endif -%}
+      </li>
+    </ul>
+  </div>
+  {{ content }}
+  </main>
+{%- include footer.html -%}
+<!-- Javascript-->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  {%- comment -%}
+    Due to i18n will translate js path to multiple lange
+    we need extract file name and to prepend baseurl_root
+  {%- endcomment -%}
+  {%- capture jspath -%}
+    {%- asset main.js @path -%}
+  {%- endcapture -%}
+  {%- assign fname=jspath | split:"/" -%}
+  {%- assign assets_path=site.baseurl_root | append:"/assets/" -%}
+  <script src="{{ fname.last | prepend: assets_path }}" type="text/javascript"></script>
