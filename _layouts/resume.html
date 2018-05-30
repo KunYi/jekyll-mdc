@@ -1,3 +1,21 @@
 ---
 layout: main
 ---
+<section class="content-collection">
+  <div>
+  {%- for section in site.data.sections -%}
+    <div class="mdc-card">
+      <div class="mdc-card__media mdc-card__media--square" id="{{ section.id }}">
+        <div class="mdc-card__media-content">
+          <h2>{% t {{ section.name }} %}</h2>
+          <div>test</div>
+          <div>
+            <span>line 1</span>
+            <span>line 2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+  </div>
+</section>
