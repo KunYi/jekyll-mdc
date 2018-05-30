@@ -2,6 +2,25 @@
 layout: default
 namespace: main
 ---
-<!-- include content -->
+{%- comment -%}
+    place menu into '<main>' sections
+{%- endcomment -%}
+<div class="mdc-menu" tabindex="-1" id="menu">
+  <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+    {%- for section in site.data.sections -%}
+    <li class="mdc-list-item" role="menuitem" tabindex="0">
+       {% t {{ section.name }} %}
+    </li>
+    {%- endfor -%}
+    <li class="mdc-list-divider" role="separator"></li>
+    <li class="mdc-list-item" role="menuitem" tabindex="0">
+       {%- if site.lang == "en" -%}
+         中
+       {%- else -%}
+         En
+       {%- endif -%}
+     </li>
+  </ul>
+</div>
 {{ content }}
 
