@@ -1185,14 +1185,11 @@ menuButtonEl.addEventListener('click', function () {
 
 // Listen for selected item
 menuEl.addEventListener('MDCMenu:selected', function (evt) {
-  var detail = evt.detail;
+  var detail = evt.detail; // get item
 });
 
 // Set Anchor Corner to Bottom End
 menu.setAnchorCorner(Corner.BOTTOM_END);
-
-// Turn off menu open animations
-menu.quickOpen = true;
 
 /***/ }),
 /* 9 */
