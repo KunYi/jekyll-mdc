@@ -3,10 +3,16 @@
   {%- include head.html -%}
   <body>
       {%- include header.html -%}
+      <div class="contain-wrap"></div>
       <main class="mdc-top-app-bar--fixed-adjust">
        {{ content }}
       </main>
       {%- include footer.html -%}
+      <!-- Javascript-->
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
       {%- comment -%}
         Due to i18n will translate js path to multiple lange
         we need extract file name and to prepend baseurl_root
