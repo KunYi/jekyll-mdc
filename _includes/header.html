@@ -7,13 +7,13 @@
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
           {%- for section in site.data.sections -%}
-            <a href="#{{ section.id }}" class="d-item">{% t {{ section.name }} %}</a>
+            <a href="#{{ section.id }}" class="d-item" onclick="jsel('{{ section.id }}')">{% t {{ section.name }} %}</a>
           {%- endfor -%}
           {%- if site.lang == "en" -%}
-            {%- capture link1 -%}{{ site.baseurl_root }}/zh-Hant-TW/index.html{%- endcapture -%}
+            {%- capture link1 -%}{{ site.baseurl_root }}/zh-Hant-TW/{%- endcapture -%}
             {%- assign lang="中" -%}
           {%- else -%}
-            {%- capture link1 -%}{{ site.baseurl_root }}/index.html{%- endcapture -%}
+            {%- capture link1 -%}{{ site.baseurl_root }}/{%- endcapture -%}
             {%- assign lang="En" -%}
           {%- endif -%}
           <a href="{{ link1 }}" class="d-item">{{ lang }}</a>
