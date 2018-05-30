@@ -7,4 +7,4 @@ npm start
 
 # run jekyll
 bundle exec jekyll build
-bundle exec htmlproofer --assume-extension --disable-external --url-swap \/jekyll-mdc: ./_site
+bundle exec htmlproofer --allow-hash-href --assume-extension --disable-external --url-swap \/jekyll-mdc: ./_site
