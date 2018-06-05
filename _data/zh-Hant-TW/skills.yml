@@ -1,0 +1,22 @@
+- Languages:
+    primary:
+      - C/C++
+    secondary:
+      - Java
+      - Assembly
+      - Bash
+      - Python
+- Hardware:
+    primary:
+      - 手機相關射頻電路
+      - 單晶片與數位電路設計
+    secondary:
+      - 音頻相關電路設計
+- Systems:
+    primary:
+      - Yocto Linux 
+      - Android  
+      - Windows  
+    secondary:
+      - FreeRTOS 
+

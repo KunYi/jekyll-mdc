@@ -1,0 +1,66 @@
+- org:  UBIQCONN TECHNOLOGY
+  role: Senior Software Engineer
+  location: NEIHU, TAIPEI 
+  url: http://www.ubiqconn.com
+  when: Mar 2010 - Dec 2017
+  bullets: 
+    - Handling an embedded linux porject to delivery on schedule. visit <a href="https://www.evoko.se/products/evoko-liso/">Evoko Liso</a>, please.
+    - Bring-up Qualcomm 8960 platfrom. debugging and troubleshooting include display, bootloader and perpherals.
+    - Implemented a custom service with special hardware for Android 7/8. include kernel/hal/framework
+    - BSP work on some rugged tablet products, platform are TI OMAP4/Android 4.x with got GMS certificate. major on device driver/framework customization.
+    - BIOS development on Phoenix BIOS with Intel platform, etc. Capella, Menlow and CedarTrail
+    - Developed BSP base on Windows CE 5.0/6.0 with Samsung S3C2416/TI OMAP3, full products life cycle.
+    - Create some utilits on Windows, like device configuration, camera and power management feature.
+    - Developed kernel driver for MIPI DSI to EDP bridge.
+    - Developed Windows CE FTL driver for large page SLC NAND.
+    - Linux NFC stack debugging and to extend function, NXP PN544
+
+- org: MILDEF CRETE SYSTEMS
+  role: Adavanced Software Engineer
+  location: SHENKENG, NEW TAIPEI 
+  url: http://eng.crete.com.tw
+  when: Nov 2006 - Dec 2009
+  bullets:
+    - Migration Windows Mobile 5 BSP to Windows Mobile 6.1 and got LTK certificate.
+    - BSP development for Windows Mobile/CE handheld device, platfrom base on PXA270/Nvidia Goforce4800
+    - BIOS development base on AMI Core8/Intel eMenlow platform. include bring-up, debugging and troubleshooting.
+    - Built up Subversion/Bug tracking server for project management.
+    - Implemented a flexable configuration feature for multi-SKU production.
+    - Migration MDOC H3/G4 device driver.
+    - Developed SDHC device driver.
+    - Porting NXP ISP176x USB host driver.
+    - Intergation Fingerprint device driver.
+
+- org: DARTS TECHNOLOGY
+  role: RF Engineer
+  location: ZHONGHE, NEW TAIPEI 
+  url:
+  when: Apr 2004 - Oct 2006
+  bullets:
+    - Project planning of design, implemented circuit and validation test by RF parts and management deliverables on schedule.
+    - Evalution new component. like front-end, PA and filter.
+    - Drawing Schematic, components placement for PCB layout.
+    - Evalution FM/Bluetooth/DVB-T technology.
+    - Handling FTA process and pre-verfication in house.
+    - Provide some suggestions to reduce 40% time on full channel automation verfication system.
+    - Support factory to built up mass production environments.
+
+- org: LITE-ON TECHNOLOGY
+  role: RF Engineer
+  location: XINZHU 
+  url: http://www.liteon.com
+  when: Mar 2003 - Mar 2004
+  bullets:
+    - Drawing Schematic and PCB layout for RF parts.
+    - Verify RF performance for new component.
+    - Support FTA process.
+    - Attend an industry-university cooperatove research project for study RF power amplifier.
+
+- org: GOODWILL INSTRUMENT
+  role: Firmware Engineer
+  location: XINDIAN, NEW TAIPEI
+  url: http://www.gwinstek.com
+  when: Sep 1998 - May 2000
+  bullets:
+    - Developed an ODM project. Successfully built a digital voice of fire alarm of public address system to market.
+

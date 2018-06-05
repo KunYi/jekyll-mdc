@@ -2,20 +2,22 @@
 layout: main
 ---
 <section class="content-collection">
-  <div>
   {%- for section in site.data.sections -%}
-    <div class="mdc-card">
-      <div class="mdc-card__media mdc-card__media--square" id="{{ section.id }}">
-        <div class="mdc-card__media-content">
+    <div class="mdc-card" id="{{ section.id }}">
           <h2>{% t {{ section.name }} %}</h2>
-          <div>test</div>
-          <div>
-            <span>line 1</span>
-            <span>line 2</span>
-          </div>
-        </div>
-      </div>
+          <hr />
+            {%- capture section_layout -%}layout/{{section.layout}}.html{%- endcapture -%}
+            {%- if site.lang == 'en' -%}
+              {%- assign lang_hash = site.data.en -%}
+            {%- else if site.lang == 'zh-Hant-TW' -%}
+              {%- assign lang_hash = site.data.zh-Hant-TW -%}
+            {%- endif -%}
+            {%- for hash in lang_hash -%}
+              {%- if hash[0] == section.id -%}
+                {%- assign blurb = hash[1] -%}
+                {%- include {{section_layout}} -%}
+              {%- endif -%}
+            {%- endfor -%}
     </div>
   {%- endfor -%}
-  </div>
 </section>

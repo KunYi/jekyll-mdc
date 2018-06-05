@@ -1,0 +1,54 @@
+- org:  攸泰科技/UBIQCONN TECHNOLOGY
+  role: 資深軟體工程師
+  location: 台北內湖
+  url: http://www.ubiqconn.com
+  when: Mar 2010 - Dec 2017
+  bullets: 
+    - 與北歐客戶合作完成Embedded Linux 系統出貨，系統平台為i.MX6 。主要負責為BSP與Middleware
+    - 協助QUALCOMM S820平台的Android 7/8的Bringup 與客戶需求的Service/SDK實作
+    - 基於TI OMAP4/Android 4.x 與同事合作完成數個工業平板量產，並取得GMS認證
+    - 完成數個WINDOWS CE 的嵌入式系統量產，並協助客戶處理應用問題，主要基於Samsung S3C2416 與TI OMAP3
+    - 負責數個採用INTEL平台的Laptop與嵌入式系統的BIOS工作,涵蓋Legacy BIOS與UEFI
+    - 支援Windows 上的應用工具開發，對PowerMangement與DirectShow 都有了解
+
+- org: 茂訊電腦/MILDEF CRETE SYSTEMS
+  role: 高級軟體工程師
+  location: 新北深坑
+  url: http://eng.crete.com.tw
+  when: Nov 2006 - Dec 2009
+  bullets: 
+    - 負責基於PXA 270 的Windows Mobile/Windows CE 的BSP工作與處理客戶問題
+    - 基於INTEL ATOM平台的BIOS與系統Bringup
+    - 負責將基於Windows Mobile 5的BSP升級到6.1，並取得Windows Logo Test 認證
+    - 建立Subversion與Bug Tracking 系統，讓計畫可追蹤
+
+- org: 達智科技/DARTS TECHNOLOGY
+  role: 射頻工程師
+  location: 新北中和
+  url:
+  when: Apr 2004 - Oct 2006
+  bullets:
+    - 負責專案進度關於射頻方面規劃
+    - 負責GSM手機射頻相關工作，包含Bluetooth/FM Radio等區塊。負責電路圖，元件選擇與電路布局等等
+    - 處理產品送測認證問題
+    - 協助自動測試系統，提供改進方案，縮短整體測試時間為原先60%
+
+- org: 光寶科技/LITEON TECHNOLOGY
+  role: 射頻工程師
+  location: 新竹市
+  url: http://www.liteon.com
+  when: Mar 2003 - Mar 2004
+  bullets:
+    - 負責GSM手機射頻相關工作。負責電路圖，元件選擇與電路布局等等
+    - 處理產品送測認證問題
+    - 參與中央大學合作計畫，研究射頻放大器的主動特性與量測
+
+- org: 固緯電子/GOODWILL INSTRUMENT
+  role: 韌體工程師
+  location: 新北新店
+  url: http://www.gwinstek.com
+  when: Sep 1998 - May 2000
+  bullets:
+    - 負責硬體與韌體設計
+    - 成功完成與PHILIPS 的ODM業務緊急廣播系統，該產品順利量產，最後PHILIPS出脫業務賣給BOSCH
+

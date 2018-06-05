@@ -1,0 +1,26 @@
+- Languages:
+    primary:
+      - C/C++
+    secondary:
+      - Java
+      - Assembly
+      - Bash
+      - Python
+- Hardware:
+    primary:
+      - MCUs(8051/AVR/Cortex Mx)
+      - UART/I2C/SPI/USB
+      - MIPI DSI/CSI
+      - Display port 
+      - Digital logical circuts
+      - RF design of Cellur phone
+    secondary:
+      - Audio circuts application
+- Systems:
+    primary:
+      - Yocto Linux 
+      - Android  
+      - Windows  
+    secondary:
+      - FreeRTOS 
+
