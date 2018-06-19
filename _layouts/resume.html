@@ -3,9 +3,9 @@ layout: main
 ---
 <section class="content-collection">
   {%- for section in site.data.sections -%}
-    <div class="mdc-card" id="{{ section.id }}">
-          <h2>{% t {{ section.name }} %}</h2>
-          <hr />
+    <div class="mdc-card mdc-elevation--z4" id="{{ section.id }}" style="margin: 1.5rem 0 1.5rem 0">
+          <div class="section_head mdc-typography mdc-typography--headline4">{% t {{ section.name }} %}
+          </div>
             {%- capture section_layout -%}layout/{{section.layout}}.html{%- endcapture -%}
             {%- if site.lang == 'en' -%}
               {%- assign lang_hash = site.data.en -%}

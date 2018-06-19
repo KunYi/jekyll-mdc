@@ -1,9 +1,13 @@
 @import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/elevation/mdc-elevation";
 @import "@material/menu/mdc-menu";
+@import "@material/layout-grid/mdc-layout-grid";
 @import "@material/list/mdc-list";
 @import "@material/card/mdc-card";
 @import "@material/button/mdc-button";
 @import "@material/ripple/mdc-ripple";
+@import "@material/textfield/mdc-text-field";
+@import "@material/typography/mdc-typography";
 
 .foo-button {
   @include mdc-button-ink-color(teal);
@@ -40,6 +44,36 @@
   text-decoration-line: none;
   background-color: var(--mdc-theme-on-primary,rgba(255,255,255, 0.1));
 }
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  flex-direction: row;
+  margin: auto 20px;
+}
+
+.section_head {
+  margin-inline-start: 0.5rem
+};
+
+.org_title {
+  float: left;
+};
+
+.org_when {
+  float: right;
+};
+
+.role {
+  float: left;
+};
+
+.location {
+  float: right;
+};
 
 @media only screen {
   .mdc-top-app-bar__section--align-end {

@@ -1,31 +1,27 @@
-<div class="section">
+
+<div>
 {% for section in blurb %}
     <div class="block">
-        <div class="main-row">
-            <div class="org">
-				{% if section.url %}<a href="{{ section.url }}"> {% endif %}
-				<h3>{{ section.org }}</h3>
-				{% if section.url %}</a>{% endif %}
-            </div>
-            <div class="when">
-                <h3>{{ section.when }}</h3>
-            </div>
-        </div>
-        <div class="sub-row">
-            <div class="role">
-                <h4>{{ section.role }}</h4>
-            </div>
-            <div class="location">
-                <h4>{{ section.location }}</h4>
-            </div>
-        </div>
+        <div class="section"><span>
+            {% if section.url %}<a href="{{ section.url }}"> {% endif %}
+            <div class="mdc-typography mdc-typography--headline5 org_title">{{ section.org }}</div>
+            {% if section.url %}</a>{% endif %}
+            <div class="mdc-typography mdc-typography--headline5 org_when">{{ section.when }}</div>
+        </span>
+       </div>
+        <div class="section"><span>
+            <div class="mdc-typography mdc-typography--headline5 role">{{ section.role }}</div>
+            <div class="mdc-typography mdc-typography--headline5 location">{{ section.location }}</div>
+        </span></div>
+        <div>
         {% if section.bullets %}
-        <ul>
-            {% for bullet in section.bullets %}
-            <li>{{ bullet | markdownify }}</li>
-            {% endfor %}
-        </ul>
+            <ul class="mdc-list">
+                {% for bullet in section.bullets %}
+                <li class="mdc-list-item">{{ bullet | markdownify }}</li>
+                {% endfor %}
+            </ul>
         {% endif %}
+        </div>
     </div>
 {% endfor %}
 </div>

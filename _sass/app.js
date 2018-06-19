@@ -22,6 +22,6 @@ menuEl.addEventListener('MDCMenu:selected', function(evt) {
 });
 
 // Set Anchor Corner to Bottom End
-menu.setAnchorCorner(Corner.BOTTOM_END);
+// menu.setAnchorCorner(Corner.BOTTOM_END);
 
 
