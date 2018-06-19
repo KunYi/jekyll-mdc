@@ -4,20 +4,20 @@
     <div class="block">
         <div class="section"><span>
             {% if section.url %}<a href="{{ section.url }}"> {% endif %}
-            <div class="mdc-typography mdc-typography--headline5 org_title">{{ section.org }}</div>
+            <div class="org_title">{{ section.org }}</div>
             {% if section.url %}</a>{% endif %}
-            <div class="mdc-typography mdc-typography--headline5 org_when">{{ section.when }}</div>
+            <div class="org_when">{{ section.when }}</div>
         </span>
        </div>
         <div class="section"><span>
-            <div class="mdc-typography mdc-typography--headline5 role">{{ section.role }}</div>
-            <div class="mdc-typography mdc-typography--headline5 location">{{ section.location }}</div>
+            <div class="role">{{ section.role }}</div>
+            <div class="location">{{ section.location }}</div>
         </span></div>
         <div>
         {% if section.bullets %}
-            <ul class="mdc-list">
+            <ul>
                 {% for bullet in section.bullets %}
-                <li class="mdc-list-item">{{ bullet | markdownify }}</li>
+                <li>{{ bullet | markdownify }}</li>
                 {% endfor %}
             </ul>
         {% endif %}

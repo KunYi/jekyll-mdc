@@ -60,18 +60,22 @@
 };
 
 .org_title {
+  @include mdc-typography('headline5');
   float: left;
 };
 
 .org_when {
+  @include mdc-typography('headline5');
   float: right;
 };
 
 .role {
+  @include mdc-typography('headline5');
   float: left;
 };
 
 .location {
+  @include mdc-typography('headline5');
   float: right;
 };
 
