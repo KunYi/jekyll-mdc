@@ -101,7 +101,10 @@ assets:
     css: { autoprefixer: {}}
     img: { optim: {}}
 
- 
+  autoprefixer:
+    browsers:
+        - "last 2 versions"
+        - "IE > 9"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
