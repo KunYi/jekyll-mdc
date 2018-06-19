@@ -1190,7 +1190,7 @@ menuEl.addEventListener('MDCMenu:selected', function (evt) {
 });
 
 // Set Anchor Corner to Bottom End
-menu.setAnchorCorner(Corner.BOTTOM_END);
+// menu.setAnchorCorner(Corner.BOTTOM_END);
 
 /***/ }),
 /* 9 */
@@ -3226,7 +3226,7 @@ var MDCMenu = function (_MDCComponent) {
           _this2.previousFocus_ = document.activeElement;
         },
         restoreFocus: function restoreFocus() {
-          if (_this2.previousFocus_) {
+          if (_this2.previousFocus_ && _this2.previousFocus_.focus) {
             _this2.previousFocus_.focus();
           }
         },
