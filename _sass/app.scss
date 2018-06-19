@@ -56,7 +56,8 @@
 }
 
 .section_head {
-  margin-inline-start: 0.5rem
+  @include mdc-typography('headline4');
+  margin-inline-start: 0.5rem;
 };
 
 .org_title {
