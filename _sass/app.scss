@@ -9,11 +9,6 @@
 @import "@material/textfield/mdc-text-field";
 @import "@material/typography/mdc-typography";
 
-.foo-button {
-  @include mdc-button-ink-color(teal);
-  @include mdc-states(teal);
-}
-
 .mdc-top-app-bar__section > a:link.d-item {
     color:white;
     padding: 4px;
@@ -45,6 +40,13 @@
   background-color: var(--mdc-theme-on-primary,rgba(255,255,255, 0.1));
 }
 
+.cv_theme {
+  @include mdc-typography-base;
+  display: flex;
+  margin: 4px;
+  padding: 4px;
+}
+
 .block {
   display: flex;
   flex-direction: column;
@@ -63,31 +65,77 @@
 .org_title {
   @include mdc-typography('headline5');
   float: left;
+  font-weight: 600;
+  font-size: 1.1rem;
 };
 
 .org_when {
   @include mdc-typography('headline5');
   float: right;
+  font-weight: 800;
+  font-size: 1.1rem;
 };
 
 .role {
   @include mdc-typography('headline5');
   float: left;
+  font-weight: 800;
+  font-size: 1.1rem;
 };
 
 .location {
   @include mdc-typography('headline5');
   float: right;
+  font-weight: 600;
+  font-size: 1.1rem;
 };
 
-@media only screen {
+@media only screen and (min-width: 641px) {
   .mdc-top-app-bar__section--align-end {
     display: flex;
   }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 640px) {
   .mdc-top-app-bar__section--align-end {
     display: none;
   }
+
+  .section {
+    flex-direction: row;
+    margin: 0.5rem 1rem 0rem 1rem;
+  }
+
+  .section_head {
+    @include mdc-typography('headline5');
+    margin-inline-start: 0.5rem;
+  };
+
+  .org_title {
+    @include mdc-typography('headline6');
+    float: left;
+    font-weight: 400;
+    font-size: 0.8rem;
+  };
+
+  .org_when {
+    @include mdc-typography('headline6');
+    float: right;
+    font-weight: 600;
+    font-size: 0.8rem;
+  };
+
+  .role {
+    @include mdc-typography('headline6');
+    float: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+  };
+
+  .location {
+    @include mdc-typography('headline5');
+    float: right;
+    font-weight: 400;
+    font-size: 0.8rem;
+  };
 }

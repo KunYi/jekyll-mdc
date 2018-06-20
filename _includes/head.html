@@ -10,9 +10,7 @@
      Due to i18n will translate css path to multiple lange
      we need extract file name and to prepend baseurl_root
   {%- endcomment -%}
-  {%- capture csspath -%}
-    {%- asset main.css @path -%}
-  {%- endcapture -%}
+  {%- capture csspath -%} {%- asset main.css @path -%} {%- endcapture -%}
   {%- assign fname=csspath | split:"/" -%}
   {%- assign assets_path=site.baseurl_root | append:"/assets/"" -%}
   <link rel="stylesheet" href="{{ fname.last | prepend: assets_path }}"/>
