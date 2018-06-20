@@ -90,6 +90,12 @@
   font-size: 1.1rem;
 };
 
+.fakezone {
+  box-sizing: border-box;
+  height: $mdc-top-app-bar-row-height;
+  width: 100%;
+}
+
 @media only screen and (min-width: 641px) {
   .mdc-top-app-bar__section--align-end {
     display: flex;
