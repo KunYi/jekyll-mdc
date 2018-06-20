@@ -52,6 +52,11 @@
   flex-direction: column;
 }
 
+.inblock {
+  box-sizing: content-box;
+  padding: 1px;
+}
+
 .section {
   flex-direction: row;
   margin: 0.5rem 1rem 0rem 1rem;
