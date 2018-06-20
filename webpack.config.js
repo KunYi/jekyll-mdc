@@ -28,6 +28,16 @@ module.exports = [{
 		    includePaths: ['./node_modules']
           }
 		},
+		{ loader: 'postcss-loader',
+		  options: {
+			  plugins: function () {
+				return [
+					autoprefixer({
+						browsers: ['last 4 versions', '> 1%', 'IE >= 9']
+				})]
+			  }
+		  }
+		}
       ]
     }]
   },

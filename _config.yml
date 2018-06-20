@@ -97,14 +97,14 @@ assets:
     - _sass
     - _sass/vendor
 
-  plugins:
-    css: { autoprefixer: {}}
-    img: { optim: {}}
-
   autoprefixer:
-    browsers:
-        - "last 2 versions"
-        - "IE > 9"
+    browser:
+      - "last 4 versions"
+      - "IE >= 9"
+
+  plugins:
+    css: { autoprefixer: { flexbox: true, grid: true } }
+    img: { optim: {}}
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
