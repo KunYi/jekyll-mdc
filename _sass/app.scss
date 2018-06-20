@@ -112,30 +112,38 @@
   };
 
   .org_title {
-    @include mdc-typography('headline6');
+    @include mdc-typography-base;
     float: left;
-    font-weight: 400;
-    font-size: 0.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    max-width: 140px;
+    padding: 0 2px;
   };
 
   .org_when {
-    @include mdc-typography('headline6');
+    @include mdc-typography-base;
     float: right;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    max-width: 108px;
+    padding: 0 2px;
   };
 
   .role {
-    @include mdc-typography('headline6');
+    @include mdc-typography-base;
     float: left;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    max-width: 140px;
+    padding: 0 2px;
   };
 
   .location {
-    @include mdc-typography('headline5');
+    @include mdc-typography-base;
     float: right;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    max-width: 108px;
+    padding: 0 2px;
   };
 }
