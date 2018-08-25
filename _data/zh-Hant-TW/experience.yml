@@ -1,3 +1,14 @@
+- org:  研揚科技/AAEON TECHNOLOGY
+  role: 技術課長
+  location: 新北新店
+  url: http://www.aaeon.com.tw
+  when: Jul 2018 - Present
+  bullets:
+    - 負責Windows 應用工具與驅動程式開發
+    - 負責生產Windows 10 IoT Core 系統影像檔，有INTEL/NXP i.MX6平台經驗
+    - 維護既有工具程式如更新BIOS工具
+    - 發展新的軟體功能，如擴展新的EAPI(Embedded Application Interface)功能, 讓其適合物聯網世代
+
 - org:  攸泰科技/UBIQCONN TECHNOLOGY
   role: 資深軟體工程師
   location: 台北內湖

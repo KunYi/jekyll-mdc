@@ -1,3 +1,14 @@
+- org: AAEON TECHNOLOGY
+  role: Technical Supervisor
+  location: XINDIAN, NEW TAIPEI
+  url: http://www.aaeon.com.tw/en/
+  when: Jul 2018 - Present
+  bullets:
+    - Development windows application and driver
+    - Build Windows 10 IoT Core OS image for Intel/NXP platform
+    - Maintenance some utilizes
+    - Create new EAPI features for embedded application on IoT era
+
 - org:  UBIQCONN TECHNOLOGY
   role: Senior Software Engineer
   location: NEIHU, TAIPEI 
