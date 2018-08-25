@@ -1528,13 +1528,19 @@ var MDCRipple = function (_MDCComponent) {
       this.foundation_.layout();
     }
 
-    /** @return {!MDCRippleFoundation} */
+    /**
+     * @return {!MDCRippleFoundation}
+     * @override
+     */
 
   }, {
     key: 'getDefaultFoundation',
     value: function getDefaultFoundation() {
       return new _foundation2.default(MDCRipple.createAdapter(this));
     }
+
+    /** @override */
+
   }, {
     key: 'initialSyncWithDOM',
     value: function initialSyncWithDOM() {
@@ -1845,16 +1851,12 @@ var MDCRippleFoundation = function (_MDCFoundation) {
 
     /** @private {function(?Event=)} */
     _this.focusHandler_ = function () {
-      return requestAnimationFrame(function () {
-        return _this.adapter_.addClass(MDCRippleFoundation.cssClasses.BG_FOCUSED);
-      });
+      return _this.handleFocus();
     };
 
     /** @private {function(?Event=)} */
     _this.blurHandler_ = function () {
-      return requestAnimationFrame(function () {
-        return _this.adapter_.removeClass(MDCRippleFoundation.cssClasses.BG_FOCUSED);
-      });
+      return _this.handleBlur();
     };
 
     /** @private {!Function} */
@@ -1902,8 +1904,8 @@ var MDCRippleFoundation = function (_MDCFoundation) {
 
 
   _createClass(MDCRippleFoundation, [{
-    key: 'isSupported_',
-    value: function isSupported_() {
+    key: 'supportsPressRipple_',
+    value: function supportsPressRipple_() {
       return this.adapter_.browserSupportsCssVars();
     }
 
@@ -1923,76 +1925,86 @@ var MDCRippleFoundation = function (_MDCFoundation) {
         isProgrammatic: false
       };
     }
+
+    /** @override */
+
   }, {
     key: 'init',
     value: function init() {
       var _this2 = this;
 
-      if (!this.isSupported_()) {
-        return;
+      var supportsPressRipple = this.supportsPressRipple_();
+
+      this.registerRootHandlers_(supportsPressRipple);
+
+      if (supportsPressRipple) {
+        var _MDCRippleFoundation$ = MDCRippleFoundation.cssClasses,
+            ROOT = _MDCRippleFoundation$.ROOT,
+            UNBOUNDED = _MDCRippleFoundation$.UNBOUNDED;
+
+        requestAnimationFrame(function () {
+          _this2.adapter_.addClass(ROOT);
+          if (_this2.adapter_.isUnbounded()) {
+            _this2.adapter_.addClass(UNBOUNDED);
+            // Unbounded ripples need layout logic applied immediately to set coordinates for both shade and ripple
+            _this2.layoutInternal_();
+          }
+        });
       }
-      this.registerRootHandlers_();
-
-      var _MDCRippleFoundation$ = MDCRippleFoundation.cssClasses,
-          ROOT = _MDCRippleFoundation$.ROOT,
-          UNBOUNDED = _MDCRippleFoundation$.UNBOUNDED;
-
-      requestAnimationFrame(function () {
-        _this2.adapter_.addClass(ROOT);
-        if (_this2.adapter_.isUnbounded()) {
-          _this2.adapter_.addClass(UNBOUNDED);
-          // Unbounded ripples need layout logic applied immediately to set coordinates for both shade and ripple
-          _this2.layoutInternal_();
-        }
-      });
     }
+
+    /** @override */
+
   }, {
     key: 'destroy',
     value: function destroy() {
       var _this3 = this;
 
-      if (!this.isSupported_()) {
-        return;
-      }
+      if (this.supportsPressRipple_()) {
+        if (this.activationTimer_) {
+          clearTimeout(this.activationTimer_);
+          this.activationTimer_ = 0;
+          var FG_ACTIVATION = MDCRippleFoundation.cssClasses.FG_ACTIVATION;
 
-      if (this.activationTimer_) {
-        clearTimeout(this.activationTimer_);
-        this.activationTimer_ = 0;
-        var FG_ACTIVATION = MDCRippleFoundation.cssClasses.FG_ACTIVATION;
+          this.adapter_.removeClass(FG_ACTIVATION);
+        }
 
-        this.adapter_.removeClass(FG_ACTIVATION);
+        var _MDCRippleFoundation$2 = MDCRippleFoundation.cssClasses,
+            ROOT = _MDCRippleFoundation$2.ROOT,
+            UNBOUNDED = _MDCRippleFoundation$2.UNBOUNDED;
+
+        requestAnimationFrame(function () {
+          _this3.adapter_.removeClass(ROOT);
+          _this3.adapter_.removeClass(UNBOUNDED);
+          _this3.removeCssVars_();
+        });
       }
 
       this.deregisterRootHandlers_();
       this.deregisterDeactivationHandlers_();
-
-      var _MDCRippleFoundation$2 = MDCRippleFoundation.cssClasses,
-          ROOT = _MDCRippleFoundation$2.ROOT,
-          UNBOUNDED = _MDCRippleFoundation$2.UNBOUNDED;
-
-      requestAnimationFrame(function () {
-        _this3.adapter_.removeClass(ROOT);
-        _this3.adapter_.removeClass(UNBOUNDED);
-        _this3.removeCssVars_();
-      });
     }
 
-    /** @private */
+    /**
+     * @param {boolean} supportsPressRipple Passed from init to save a redundant function call
+     * @private
+     */
 
   }, {
     key: 'registerRootHandlers_',
-    value: function registerRootHandlers_() {
+    value: function registerRootHandlers_(supportsPressRipple) {
       var _this4 = this;
 
-      ACTIVATION_EVENT_TYPES.forEach(function (type) {
-        _this4.adapter_.registerInteractionHandler(type, _this4.activateHandler_);
-      });
+      if (supportsPressRipple) {
+        ACTIVATION_EVENT_TYPES.forEach(function (type) {
+          _this4.adapter_.registerInteractionHandler(type, _this4.activateHandler_);
+        });
+        if (this.adapter_.isUnbounded()) {
+          this.adapter_.registerResizeHandler(this.resizeHandler_);
+        }
+      }
+
       this.adapter_.registerInteractionHandler('focus', this.focusHandler_);
       this.adapter_.registerInteractionHandler('blur', this.blurHandler_);
-
-      if (this.adapter_.isUnbounded()) {
-        this.adapter_.registerResizeHandler(this.resizeHandler_);
-      }
     }
 
     /**
@@ -2435,6 +2447,24 @@ var MDCRippleFoundation = function (_MDCFoundation) {
       } else {
         this.adapter_.removeClass(UNBOUNDED);
       }
+    }
+  }, {
+    key: 'handleFocus',
+    value: function handleFocus() {
+      var _this16 = this;
+
+      requestAnimationFrame(function () {
+        return _this16.adapter_.addClass(MDCRippleFoundation.cssClasses.BG_FOCUSED);
+      });
+    }
+  }, {
+    key: 'handleBlur',
+    value: function handleBlur() {
+      var _this17 = this;
+
+      requestAnimationFrame(function () {
+        return _this17.adapter_.removeClass(MDCRippleFoundation.cssClasses.BG_FOCUSED);
+      });
     }
   }]);
 
