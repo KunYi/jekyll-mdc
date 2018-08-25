@@ -9,6 +9,12 @@
 @import "@material/textfield/mdc-text-field";
 @import "@material/typography/mdc-typography";
 
+.mdc-top-app-bar--fixed {
+	max-width: 864px;
+	position: relative;
+	margin: 0 auto;
+}
+
 .mdc-top-app-bar__section > a:link.d-item {
     color:white;
     padding: 4px;
