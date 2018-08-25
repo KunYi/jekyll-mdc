@@ -46,6 +46,12 @@
   background-color: var(--mdc-theme-on-primary,rgba(255,255,255, 0.1));
 }
 
+.site-footer {
+  max-width: 864px;
+  position: relative;
+  margin: 0 auto;
+}
+
 .cv_theme {
   @include mdc-typography-base;
   display: flex;
@@ -104,8 +110,16 @@
 
 .fakezone {
   box-sizing: border-box;
-  height: $mdc-top-app-bar-row-height;
+  height: 0.4rem;
   width: 100%;
+}
+
+.cloud-section {
+	margin: auto 1rem;
+}
+
+.cloud-section > div {
+	margin: auto 0.8rem;
 }
 
 @media only screen and (min-width: 641px) {
