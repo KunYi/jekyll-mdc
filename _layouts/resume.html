@@ -3,8 +3,13 @@ layout: main
 ---
 <section class="content-collection">
   <div class="fakezone"><span></span></div>
+  {%- assign prt_title_once = false -%}
   {%- for section in site.data.sections -%}
     <div class="mdc-card mdc-elevation--z4" id="{{ section.id }}" style="margin: 1.5rem 0 1.5rem 0">
+      {%- if prt_title_once != true -%}
+        {%- assign prt_title_once = true -%}
+          <div class="print-title">{{ site.title }}</div>
+        {%- endif -%}
           <div class="section_head">{% t {{ section.name }} %}
           </div>
             {%- capture section_layout -%}layout/{{section.layout}}.html{%- endcapture -%}
@@ -22,3 +27,4 @@ layout: main
     </div>
   {%- endfor -%}
 </section>
+
