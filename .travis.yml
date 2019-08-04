@@ -1,7 +1,7 @@
 language: ruby
 os: linux
 rvm:
-- 2.4.1
+- 2.4.5
 addons:
   apt:
     update: true
@@ -17,9 +17,9 @@ branches:
   - "/pages-(.*)/"
 env:
   global:
-  - NODE_VERSION="8.11.3"
+  - NODE_VERSION="8.16.0"
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - secure: og9Rjy1DubvM4HjNcF9K5cvhTPTQJhKLHcl7Qj1iN6DVlSGdmamsvkq/3xPbBItm+kNKA8IGbZd83EKohNm6RLqCql5hRrwGQrENRbfp+IqBagCrJYkRg3V6UvLqusKsho/ug9Kqgtl+xYya2TiQFz+Ab71oqHpolPNkWNi8OCoi/odYDK37chwlyJN7bg5nMo2buW1rSBEQOmLGKTRItTbRgVN3XGnDqQv2SppDJgpH4JKrVfSLmbK4BuDWOvqL7Yy90aaguK4a4Cd0O+QaZrv77PXX85/R/CL6h9vLM/0t6pv+v84PrZhvfN9uwFQE3ZqRx4zHZxF95gQnyB/vhYAs7BzPsaCG87nl8S6YVHyNUZI/VsPXZz6VJbr1MNGeZCXvRQLVvwVCXyiCTUKo2OV5wp8CTkQwhlQ5bo20CJnjqcb2QPpKz6Nw/GgZW5Wx592wumxChK/DqxAfGMsWxKPvtGBepIW0dCGURSYj3W8LlCyQFXsz5O8iLlxmUmHPOTiH97kGNgOIcI9Z3BQ9ALlyN/8ioMUV/v0bBMWqYmAfnqHM6UTplyg3ghiM+w8gy+FJQsK6+33MPlSWVu+/hxxnXn/OkP/dRx8F+UOg+QY4wq5FB2dKRQmgpwOSO6RRZIDZU4I5Q4JLs1yG1u3cqGBwz596uF2FBBikDmksWRE=
+  - secure: FbtYUzbwpP1Mpe1YEtQVz/rc9Ds2l2/eCVxgFgiH/M24kJ95XGqPEmecYheNkPOxHioVT54F2bOjB5ZElgsGO9lxWaOKzDY+/+nDtZyATAfsqE+QltEwNLecnVyFFLXtIa+po8yelSBqS84iCyyrZJ6WnBJePaAYtlKOKHIrHmLKIAKMP257jslhch3thO1Sr1p7M8bz70JQr5KMlR/sMGLsjpzDzxb8zUlmlNw7j8YP6eAJZkM8PoaRIucFZsEuDD2aQ3rYJmACotyKcd8Tch1Yf6oyZt5Ygsh2NLLwl0P9EvHcabUldrcNntVK5APU2Bzqdos1ZU3+m2VuYk+eaWcDsF1qFbGJwICsOReaUZlTREmTywwc/uZ7Qh41JKR2J7TPcsxQGLKXP++Z1aqCtGJtRl7YJRIX8De9YpDeqCAgMvX7BL2DIqxlMvxrHWlyJvZP3OkSwOWsi/wRh7yis8ab3AZte6pNlZNsC0sFrfzElgC5In0mZPUlCJi4y/oQjBn45nuJD/FqmqvuighCxF6h0x9CDav/s9YoxplIILCGThk4Ltvf+gwZoal10pFbmEt9kXfa2+ckx5psn03Fck0DF+XqOZ2yBdo5s2qPfwNCYuYXKG7QOJRTFfYCetzdjDiWlN5tHNxaGKgsyb8YRC+h0eGYBOg0GGUREapOo+I=
 sudo: false
 deploy:
   provider: pages
