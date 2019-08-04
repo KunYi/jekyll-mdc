@@ -8,6 +8,8 @@
     - 負責生產Windows 10 IoT Core 系統影像檔，有INTEL/NXP i.MX6平台經驗
     - 維護既有工具程式如更新BIOS工具
     - 發展新的軟體功能，如擴展新的EAPI(Embedded Application Interface)功能, 讓其適合物聯網世代
+    - 使用 MBed/FreeRTOS 與數種MCU 實做數個IOT專案
+    - 透過 OpenVINO/ONNX Runtime 建立數個 AI 示範案例
 
 - org:  攸泰科技/UBIQCONN TECHNOLOGY
   role: 資深軟體工程師
