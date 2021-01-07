@@ -18,8 +18,8 @@ gem "jekyll", "~> 3.8.2"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "autoprefixer-rails"
-  gem "jekyll-assets"
+  gem "autoprefixer-rails", "~> 9.8.6.5"
+  gem "jekyll-assets", "~> 3.0.12"
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-coffeescript", "~> 1.1.0"
   gem "jekyll-multiple-languages-plugin", "~> 1.5.0"
